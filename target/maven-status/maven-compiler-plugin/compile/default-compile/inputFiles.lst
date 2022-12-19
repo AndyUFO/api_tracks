@@ -1,0 +1,11 @@
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\repository\ITrackRepository.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\service\ITrackService.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\repository\impl\ISpotifyRepositoryImpl.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\entity\Track.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\repository\ISpotifyRepository.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\service\impl\SpotifyServiceImpl.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\SpotifyApplication.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\controller\TrackController.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\service\impl\TrackServiceImpl.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\controller\SpotifyController.java
+D:\Personal\Cursos\BEDU\HSBC-Devops_Java\02 Java BackEnd\spotify\src\main\java\org\bedu\spotify\service\ISpotifyService.java
