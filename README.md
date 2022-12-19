@@ -48,6 +48,9 @@ https://github.com/AndyUFO/api_tracks/blob/88c1d7a9c1764400a3b91e33a9b541fb27dde
 
 # Configuracion del archivo .properties
 
+https://github.com/AndyUFO/api_tracks/blob/78a16e1fad1b011a51dcc9e291bb41e8bd80b790/src/main/resources/application.properties
+
+
 
 
 
