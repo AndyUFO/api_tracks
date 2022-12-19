@@ -5,6 +5,9 @@ Nombre : Andres González Pascual
 
 Correo : deepdish303@gmail.com
 
+Video de funcionamiento del API : https://drive.google.com/file/d/10XIG4H0Sjcp3L3HS9RUtaFe7TlzZWIJc/view?usp=sharing
+
+
 # Objetivos
 
 Desarrollar una aplicación de Backend empleando herramientas y componentes como Spring Framework 5 y Spring Boot 2, siguiendo los lineamientos y buenas prácticas de métodos HTTP y manejo de peticiones para su uso y configuración.
