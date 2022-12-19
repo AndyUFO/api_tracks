@@ -7,9 +7,9 @@ Correo : deepdish303@gmail.com
 
 Video de funcionamiento del API : 
 
-[![Opcion 1](https://img.youtube.com/vi/8-i0zaTGVjw/0.jpg)](https://www.youtube.com/watch?v=8-i0zaTGVjw)
+[![Opcion 1 Youtube](https://img.youtube.com/vi/8-i0zaTGVjw/0.jpg)](https://www.youtube.com/watch?v=8-i0zaTGVjw)
 
-[Opcion 2] (https://drive.google.com/file/d/10XIG4H0Sjcp3L3HS9RUtaFe7TlzZWIJc/view?usp=sharing)
+[Opcion 2 Google Drive](https://drive.google.com/file/d/10XIG4H0Sjcp3L3HS9RUtaFe7TlzZWIJc/view?usp=sharing)
 
 
 # Objetivos
