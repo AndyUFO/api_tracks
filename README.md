@@ -50,6 +50,20 @@ https://github.com/AndyUFO/api_tracks/blob/88c1d7a9c1764400a3b91e33a9b541fb27dde
 
 https://github.com/AndyUFO/api_tracks/blob/78a16e1fad1b011a51dcc9e291bb41e8bd80b790/src/main/resources/application.properties
 
+'''
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/spotify
+spring.datasource.username=root
+spring.datasource.password=slacK201
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+logging.level.root=INFO
+logging.pattern.console=[%blue(%d{dd/MM/YYYY hh:mm:ss})] [%yellow(%logger)] [%highlight(%-5level)] - %msg%n
+'''
+
 
 
 
