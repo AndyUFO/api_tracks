@@ -16,7 +16,7 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
 
 ![image](https://user-images.githubusercontent.com/15675318/208328595-29ab8f8b-af0e-48d1-9c5e-df80eecbdaf7.png)
 
-# EndPoints generados
+# EndPoints generados :
 
  * /spotify/{search}/{size}[GET]: hace la consulta de canciones con la palabra {search} a la API de spotify  y obtiene una lista de tamaño máximo {size}
  
@@ -30,7 +30,9 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
  
  * /track/{id}{DELETE}: Borra el registro con el id {id} en la base de datos
 
-![image](https://user-images.githubusercontent.com/15675318/208329013-a8817c5e-d8d4-4aea-83fe-d1658911d442.png)
+# Entity usado para guardar la informacion en Base de datos
+
+![image](https://user-images.githubusercontent.com/15675318/208333238-99591c49-dbe4-4397-85de-300c2ed1acc4.png)
 
 
 
