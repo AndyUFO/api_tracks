@@ -39,10 +39,16 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
 
 # Dependencias utilizadas
 
+https://github.com/AndyUFO/api_tracks/blob/88c1d7a9c1764400a3b91e33a9b541fb27dde635/pom.xml
+
 * mysql-connector-j
 * jackson-databind
 * lombok
 * Spring web
+
+# Configuracion del archivo .properties
+
+
 
 
 
