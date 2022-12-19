@@ -37,5 +37,15 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
 
 ![image](https://user-images.githubusercontent.com/15675318/208333238-99591c49-dbe4-4397-85de-300c2ed1acc4.png)
 
+# Dependencias utilizadas
+
+* mysql-connector-j
+* jackson-databind
+* lombok
+* Spring web
+
+
+
+
 
 
