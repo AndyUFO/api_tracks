@@ -46,6 +46,8 @@ public class RespuestaErrorBuilder {
         return this;
     }
 
+
+
     public RespuestaErrorBuilder ruta(String ruta) {
         this.ruta = ruta;
         return this;
