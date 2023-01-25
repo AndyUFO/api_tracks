@@ -2,7 +2,9 @@ package org.bedu.spotify.entity;
 
 import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Data;
+import org.apache.logging.log4j.message.Message;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -13,25 +15,32 @@ import java.util.Date;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonPropertyOrder(alphabetic = true)
 @Data
+//todo implementar validaciones en todos los campos
 public class Track {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id",nullable = false)
+    @JsonIgnore
     private long id;
+
 
     @JsonProperty("id")
     @Column(name = "id_spotify",nullable = false)
+    @NotNull(message="El identificador del track no puede ser nulo" )
+    @NotEmpty(message="El identificador del track no puede estar vacio")
+    @Size(min = 22,max = 22,message = "El identificador del track debe tener una longitud de 22 caracteres")
     private String idSpotify;
-
 
     @JsonProperty("disc_number")
     @Column(length = 10)
+    @NotNull(message = "El numero de disco no puede ser nulo")
     private int discNumber;
 
 
     @JsonProperty("type")
     @Column(length = 50)
+    @NotNull(message = "El type no puede ser nulo")
     private String type;
 
 
@@ -90,4 +99,11 @@ public class Track {
     public String getIdSpotify() {
         return idSpotify;
     }
+
+    @JsonSetter("idSpotify")
+    public void setIdSpotify(String idSpotify) {
+        this.idSpotify = idSpotify;
+    }
+
+
 }

@@ -49,7 +49,7 @@ public class TrackServiceImpl implements ITrackService {
     @Override
     public Track save(Track track) {
         Track insertedTrack = repository.save(track);
-        log.info("Track Id :"+insertedTrack.getId()+" Insertado correctamente");
+        log.info("TrackID "+insertedTrack.getIdSpotify()+" Nombre :"+insertedTrack.getName()+" Insertado correctamente");
         return insertedTrack;
     }
 
