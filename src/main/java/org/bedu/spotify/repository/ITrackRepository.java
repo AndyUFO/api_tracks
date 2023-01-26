@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ITrackRepository extends JpaRepository<Track,Long> {
 
+    Track  findByIdSpotify(String idSpotify);
 }

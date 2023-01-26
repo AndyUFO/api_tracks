@@ -22,35 +22,43 @@ public class TrackServiceImpl implements ITrackService {
     }
 
     @Override
-    public List<Track> findAll() {
+    public List<Track> findAll() throws Exception {
         List<Track> tracks = repository.findAll();
         if(tracks.isEmpty()){
             String errorMsg = "No existen registros en la base de datos";
-            log.info(errorMsg);
+            log.error(errorMsg);
+            throw new Exception(errorMsg);
+        }else{
+            return tracks;
         }
-        return tracks;
+
     }
 
     @Override
     public Optional<Track> findById(long id) throws Exception {
         Optional <Track> res = repository.findById(id);
-
         if(res.isEmpty()){
             String errorMsg = "No existe el track id:"+id+" en la base de datos";
             log.error(errorMsg);
             throw new Exception(errorMsg);
         }else{
-            log.info("Track Id :"+res.get().getId()+" encontrado");
+            log.info("Track id :"+res.get().getId()+" encontrado");
             log.info(res.get().toString());
             return res;
         }
     }
 
     @Override
-    public Track save(Track track) {
-        Track insertedTrack = repository.save(track);
-        log.info("TrackID "+insertedTrack.getIdSpotify()+" Nombre :"+insertedTrack.getName()+" Insertado correctamente");
-        return insertedTrack;
+    public Track save(Track track) throws Exception {
+        if(repository.findByIdSpotify(track.getIdSpotify())!=null){
+            String error = "El registro con id_spotify :"+track.getIdSpotify()+" ya existe en la base de datos";
+            log.error(error);
+            throw new Exception(error);
+        }else{
+            Track insertedTrack = repository.save(track);
+            log.info("Track id: "+insertedTrack.getId()+" Nombre :"+insertedTrack.getName()+" Insertado correctamente");
+            return insertedTrack;
+        }
     }
 
     @Override
@@ -58,7 +66,7 @@ public class TrackServiceImpl implements ITrackService {
         List<Track> insertedTrackList  = new LinkedList<>();
         for (Track track:trackList){
             Track insertedTrack = repository.save(track);
-            log.info("Track Id :"+insertedTrack.getId()+" Insertado correctamente");
+            log.info("Track id :"+insertedTrack.getId()+" Insertado correctamente");
             insertedTrackList.add(insertedTrack);
         }
         log.info("Se insertaron "+insertedTrackList.size()+" tracks");
@@ -67,21 +75,22 @@ public class TrackServiceImpl implements ITrackService {
     }
 
     @Override
-    public void update(long id, Track track) throws Exception {
+    public boolean update(long id, Track track) throws Exception {
         Optional <Track> res = repository.findById(id);
         if(res.isEmpty()){
-            String errorMsg = "No existe es track id:"+id+" en la base de datos";
+            String errorMsg = "No existe el track id:"+id+" en la base de datos";
             log.error(errorMsg);
             throw new Exception(errorMsg);
         }else{
             res.get().setDescription(track.getDescription());
             repository.save(res.get());
-            log.info("Track Id :"+id+" Actualizado correctamente");
+            log.info("Track id :"+id+" Actualizado correctamente");
+            return true;
         }
     }
 
     @Override
-    public void delete(long id) throws Exception {
+    public boolean delete(long id) throws Exception {
         Optional<Track> res = repository.findById(id);
         if (res.isEmpty()) {
             String errorMsg = "No existe el track id:"+id+" en la base de datos";
@@ -89,7 +98,8 @@ public class TrackServiceImpl implements ITrackService {
             throw new Exception(errorMsg);
         }else {
             repository.deleteById(id);
-            log.info("Track Id :"+id+" Borrado correctamente");
+            log.info("Track id :"+id+" Borrado correctamente");
+            return true;
         }
     }
 }
