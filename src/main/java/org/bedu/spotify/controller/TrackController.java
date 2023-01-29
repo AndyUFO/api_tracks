@@ -50,9 +50,9 @@ public class TrackController {
 
 
     @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public Track update(@PathVariable long id, @RequestBody Track track) throws Exception {
-        return service.update(id, track);
+    public ResponseEntity<Track>  update(@PathVariable long id, @RequestBody Track track) throws Exception {
+        return ResponseEntity.ok(service.update(id, track));
+
     }
 
     @DeleteMapping("/{id}")
