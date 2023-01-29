@@ -23,6 +23,8 @@ Continuar con el desarrollo de una aplicación de Backend empleando:
 
 El objetivo es desarrollar un API REST que permita buscar información  de canciones en la APP de Spotify con base en una palabra de búsqueda y posteriormente guardar esos registros en una base de datos Mysql local, el API generada deberá de permitir realizar operaciones CRUD sobre la base de datos generada asi como manejar un esquema de autenticacion y permisos para el uso de los distintos endpoints de la API.
 
+# Funcionalidad de la aplicación
+
 # Esquema de autenticación y autorización
  |ROL|ENDPOINT|FUNCIONALIDAD|
  |---|--------|-------------|
