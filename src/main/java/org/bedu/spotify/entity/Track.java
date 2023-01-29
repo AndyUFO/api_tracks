@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
-import org.apache.logging.log4j.message.Message;
-import org.hibernate.Length;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.URL;
@@ -78,7 +76,7 @@ public class Track {
     @JsonProperty("popularity")
     @Column(length = 3)
     @Max(value=999,message = "El campo popularity no puede ser mayor que 999")
-    @Positive(message = "El campo popularity debe de ser un numero positivo y mayor que 0")
+    @PositiveOrZero(message = "El campo popularity debe de ser un numero positivo y mayor que 0")
     private int popularity;
 
     @JsonProperty("name")

@@ -13,7 +13,7 @@ public interface ITrackService {
 
     List<Track> saveList(List<Track> trackList);
 
-    boolean update(long id,Track track) throws Exception;
+    Track update(long id,Track track) throws Exception;
 
     boolean delete(long id) throws Exception;
 }

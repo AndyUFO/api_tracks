@@ -51,14 +51,18 @@ public class TrackController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public boolean update(@PathVariable long id, @RequestBody Track track) throws Exception {
+    public Track update(@PathVariable long id, @RequestBody Track track) throws Exception {
         return service.update(id, track);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public boolean delete(@PathVariable("id") long id) throws Exception {
-        return service.delete(id);
+    public String delete(@PathVariable("id") long id) throws Exception {
+        if(service.delete(id)){
+         return "ID : "+id +" Borrado correctamente";
+        }else {
+            throw new Exception("Error al borrar el id : "+id);
+        }
     }
 
 }

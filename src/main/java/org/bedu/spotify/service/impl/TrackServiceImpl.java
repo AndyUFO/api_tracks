@@ -56,7 +56,7 @@ public class TrackServiceImpl implements ITrackService {
             throw new Exception(error);
         }else{
             Track insertedTrack = repository.save(track);
-            log.info("Track id: "+insertedTrack.getId()+" Nombre :"+insertedTrack.getName()+" Insertado correctamente");
+            log.info("Track id: "+insertedTrack.getIdSpotify()+" Nombre :"+insertedTrack.getName()+" Insertado correctamente");
             return insertedTrack;
         }
     }
@@ -75,7 +75,7 @@ public class TrackServiceImpl implements ITrackService {
     }
 
     @Override
-    public boolean update(long id, Track track) throws Exception {
+    public Track update(long id, Track track) throws Exception {
         Optional <Track> res = repository.findById(id);
         if(res.isEmpty()){
             String errorMsg = "No existe el track id:"+id+" en la base de datos";
@@ -83,9 +83,8 @@ public class TrackServiceImpl implements ITrackService {
             throw new Exception(errorMsg);
         }else{
             res.get().setDescription(track.getDescription());
-            repository.save(res.get());
             log.info("Track id :"+id+" Actualizado correctamente");
-            return true;
+            return repository.save(res.get());
         }
     }
 
