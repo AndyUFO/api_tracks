@@ -33,21 +33,6 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
  |USER|/track/{ID} [PUT]|Actualiza la descripción del track con id={ID}|
  |USER|/track/{id}[GET]|Obtiene la información del track con id={ID}|
 
-
-# EndPoints generados :
-
- * /spotify/{search}/{size}[GET]: hace la consulta de canciones con la palabra {search} a la API de spotify  y obtiene una lista de tamaño máximo {size}
- 
- * /track[GET]: obtiene la lista de tracks guardados en la BD
- 
- * /track[POST]: Guarda la información de los tracks enviados
- 
- * /track/{id}[GET]: Obtiene la información del id {id}
- 
- * /track/{id}[PUT]: Actualiza la información del campo descripción en el registro con id {id}en la base de datos 
- 
- * /track/{id}{DELETE}: Borra el registro con el id {id} en la base de datos
-
 # Estructura de la tabla de datos Mysql utilizada para guardar la informacion en Base de datos
 
 ![image](https://user-images.githubusercontent.com/15675318/208333238-99591c49-dbe4-4397-85de-300c2ed1acc4.png)
