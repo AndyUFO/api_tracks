@@ -9,9 +9,9 @@ Correo : deepdish303@gmail.com
 # Demostracion de la aplicación
 
 
-[![Opcion 1 Youtube](https://img.youtube.com/vi/8-i0zaTGVjw/0.jpg)](https://www.youtube.com/watch?v=8-i0zaTGVjw)
+[Opcion 1 Youtube](https://youtu.be/nSqB9fVf2Mc)
 
-[Opcion 2 Google Drive](https://drive.google.com/file/d/10XIG4H0Sjcp3L3HS9RUtaFe7TlzZWIJc/view?usp=sharing)
+[Opcion 2 Google Drive](https://drive.google.com/file/d/1c40juR8NSFnWh6pq82dhTaVwsSotU1R6/view?usp=sharing)
 
 
 # Objetivos
