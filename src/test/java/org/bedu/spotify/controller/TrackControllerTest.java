@@ -26,13 +26,10 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class TrackControllerTest {
-
     @Mock
     private ITrackService service;
-
     @InjectMocks
     TrackController trackController;
-
     @SneakyThrows
     @Test
     @DisplayName("Prueba de buscar todos los registros en la base de datos")

@@ -31,7 +31,7 @@ adicionalmente se debe contar con un conjunto de pruebas unitarias para verifica
 
 
 # Alcance de la aplicación
-## Esquema de autenticación y autorización
+## Esquema de autenticación/autorización y Endpoints generados
  |ROL| ENDPOINT                               | METODO   | FUNCIONALIDAD                                                                                                               |
 |--|----------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
  |ADMIN| /spotify/{palabra_busqueda}/{cantidad} | [GET]    | hace petición a la API de spotify buscando tracks que contengan la {palabra_de_busqueda} con un límite de {cantidad} tracks |
