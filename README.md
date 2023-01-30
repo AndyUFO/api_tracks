@@ -34,14 +34,13 @@ adicionalmente se debe contar con un conjunto de pruebas unitarias para verifica
 ## Esquema de autenticación/autorización y Endpoints generados
  |ROL| ENDPOINT                               | METODO   | FUNCIONALIDAD                                                                                                               |
 |--|----------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
+ |ANONYMOUS| /track/public                          | [GET]    | EndPoint publico, no requiere autenticacion                                                            |
  |ADMIN| /spotify/{palabra_busqueda}/{cantidad} | [GET]    | hace petición a la API de spotify buscando tracks que contengan la {palabra_de_busqueda} con un límite de {cantidad} tracks |
  |ADMIN| /track                                 | [POST]   | Guarda en la base de datos la información del track enviada                                                                 |
  |ADMIN| /track/{ID}                            | [DELETE] | Elimina el registro con id={ID} de la base de datos                                                                         |
  |USER| /track                                 | [GET]    | Lista todos los tracks guardados en bd                                                                                      |
  |USER| /track/{ID}                            | [PUT]    | Actualiza la descripción del track con id={ID}                                                                              |
  |USER| /track/{id}                            | [GET]    | Obtiene la información del track con id={ID}                                                                                |
- |USER| /track/{id}                            | [GET]    | Obtiene la información del track con id={ID}                                                                                |
- |ANONYMOUS| /track/public                          | [GET]    | EndPoint publico, no requiere autenticacion                                                            |
 
 ## :hammer:Testing
 
