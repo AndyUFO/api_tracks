@@ -11,9 +11,6 @@ Correo : deepdish303@gmail.com
 
 [Opcion 1 Youtube](https://youtu.be/nSqB9fVf2Mc)
 
-[Opcion 2 Google Drive](https://drive.google.com/file/d/1c40juR8NSFnWh6pq82dhTaVwsSotU1R6/view?usp=sharing)
-
-
 # Objetivos
 
 Continuar con el desarrollo de una aplicación de Backend empleando:
