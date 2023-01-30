@@ -37,6 +37,11 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
  |USER| /track/{id}                            | [GET]    | Obtiene la información del track con id={ID}                                                                                |
  |ANONYMOUS| /track/public                          | [GET]    | EndPoint publico, no requiere autenticacion                                                            |
 
+# Testing
+Siuite de pruebas
+Mockito
+Junit 5
+
 # Estructura de la tabla de datos Mysql utilizada para guardar la informacion en Base de datos
 
 ![image](https://user-images.githubusercontent.com/15675318/208333238-99591c49-dbe4-4397-85de-300c2ed1acc4.png)
