@@ -48,7 +48,7 @@ adicionalmente se debe contar con un conjunto de pruebas unitarias para verifica
 -`Junit`: Se desarrollo un set de pruebas en JUnit5
 
 -`Mockito`: Se utilizaron Mocks de pruebas simulando servicios que posteriormente fueron injectados a los controladores 
-para simular el uso de los servicios REST
+para probar el funcionamiento de los servicios REST
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -79,37 +79,18 @@ class TrackControllerTest {
 }
 ```
 
-# Estructura de la tabla de datos Mysql utilizada para guardar la informacion en Base de datos
+# Estructura de la tabla de datos Mysql
 
 ![image](https://user-images.githubusercontent.com/15675318/208333238-99591c49-dbe4-4397-85de-300c2ed1acc4.png)
 
 # Dependencias utilizadas
 
-https://github.com/AndyUFO/api_tracks/blob/88c1d7a9c1764400a3b91e33a9b541fb27dde635/pom.xml
-
 * mysql-connector-j
-* jackson-databind
-* lombok
+* Jackson-databind
+* Lombok
 * Spring web
-
-# Configuracion del archivo .properties
-
-https://github.com/AndyUFO/api_tracks/blob/78a16e1fad1b011a51dcc9e291bb41e8bd80b790/src/main/resources/application.properties
-
-```
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://localhost:3306/spotify
-spring.datasource.username=root
-spring.datasource.password=slacK201
-spring.jpa.hibernate.ddl-auto=create
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-
-logging.level.root=INFO
-logging.pattern.console=[%blue(%d{dd/MM/YYYY hh:mm:ss})] [%yellow(%logger)] [%highlight(%-5level)] - %msg%n
-```
-
+* Junit 5
+* Mockito
 
 
 
