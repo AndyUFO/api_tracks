@@ -6,7 +6,8 @@ Nombre : Andres González Pascual
 
 Correo : deepdish303@gmail.com
 
-Video de funcionamiento del API : 
+# Demostracion de la aplicación
+
 
 [![Opcion 1 Youtube](https://img.youtube.com/vi/8-i0zaTGVjw/0.jpg)](https://www.youtube.com/watch?v=8-i0zaTGVjw)
 
@@ -21,15 +22,16 @@ Continuar con el desarrollo de una aplicación de Backend empleando:
 
 # Descripción de la aplicación
 
-El objetivo es desarrollar un API REST que permita buscar información  de canciones en la APP de Spotify con base en una palabra de búsqueda y posteriormente guardar esos registros en una base de datos Mysql local, el API generada deberá de permitir realizar operaciones CRUD sobre la base de datos generada asi como manejar un esquema de autenticacion y permisos para el uso de los distintos endpoints de la API.
+El objetivo es desarrollar un API REST que permita buscar información  de tracks de canciones en la APP de Spotify, esto con base en una palabra de búsqueda para posteriormente guardar estos registros en una base de datos Mysql, el API deberá de permitir realizar operaciones CRUD sobre la base de datos generada asi como manejar un esquema de autenticacion y permisos para el uso de los distintos endpoints de la API,
+adicionalmente se debe contar con un conjunto de pruebas unitarias para verificar el correcto funcionamiento de los distintos controladores REST de la applicación , por ultimo esta aplicacion debera ser publicada para probar su funcionalidad en un entorno de pruebas.  
 
 # Funcionalidad de la aplicación
 
 ![image](https://user-images.githubusercontent.com/15675318/215378512-fe83998e-9ea1-49c4-91b1-9cdde60d15c2.png)
 
 
-
-# Esquema de autenticación y autorización
+# Alcance de la aplicación
+## Esquema de autenticación y autorización
  |ROL| ENDPOINT                               | METODO   | FUNCIONALIDAD                                                                                                               |
 |--|----------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
  |ADMIN| /spotify/{palabra_busqueda}/{cantidad} | [GET]    | hace petición a la API de spotify buscando tracks que contengan la {palabra_de_busqueda} con un límite de {cantidad} tracks |
@@ -41,10 +43,41 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
  |USER| /track/{id}                            | [GET]    | Obtiene la información del track con id={ID}                                                                                |
  |ANONYMOUS| /track/public                          | [GET]    | EndPoint publico, no requiere autenticacion                                                            |
 
-# Testing
-Siuite de pruebas
-Mockito
-Junit 5
+## :hammer:Testing
+
+-`Junit`: Se desarrollo un set de pruebas en JUnit5
+
+-`Mockito`: Se utilizaron Mocks de pruebas simulando servicios que posteriormente fueron injectados a los controladores 
+para simular el uso de los servicios REST
+
+```java
+@ExtendWith(MockitoExtension.class)
+class TrackControllerTest {
+ @Mock
+ private ITrackService service;//doble de pruebas de un servicio
+ @InjectMocks
+ TrackController trackController;//injeccion al controlador
+
+ @SneakyThrows
+ @Test
+ @DisplayName("Prueba de guardado de registros")
+ void saveTrack() {
+  MockHttpServletRequest request = new MockHttpServletRequest();
+  RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(request));
+
+  Track track = new Track();
+  track.setId(1);
+  when(service.save((any(Track.class)))).thenReturn(track);//definiendo comportamiento del servicio 
+
+  Track track1 = new Track();
+  track1.setId(1);
+  ResponseEntity<Track> responseEntity = trackController.saveTrack(track);//ejecutando el controlador
+
+  assertEquals(1, Objects.requireNonNull(responseEntity.getBody()).getId());//test
+  assertEquals(HttpStatus.OK, responseEntity.getStatusCode());//test
+ }
+}
+```
 
 # Estructura de la tabla de datos Mysql utilizada para guardar la informacion en Base de datos
 
