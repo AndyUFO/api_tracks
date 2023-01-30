@@ -25,6 +25,10 @@ El objetivo es desarrollar un API REST que permita buscar información  de canci
 
 # Funcionalidad de la aplicación
 
+![image](https://user-images.githubusercontent.com/15675318/215378512-fe83998e-9ea1-49c4-91b1-9cdde60d15c2.png)
+
+
+
 # Esquema de autenticación y autorización
  |ROL| ENDPOINT                               | METODO   | FUNCIONALIDAD                                                                                                               |
 |--|----------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
