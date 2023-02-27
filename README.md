@@ -6,10 +6,7 @@ Nombre : Andres González Pascual
 
 Correo : deepdish303@gmail.com
 
-# Demostracion de la aplicación
-
-
-[Opcion 1 Youtube](https://youtu.be/nSqB9fVf2Mc)
+Repositorio de el frontend de esta API : https://github.com/AndyUFO/app_tracks 
 
 # Objetivos
 
