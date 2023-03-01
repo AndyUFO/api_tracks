@@ -71,6 +71,10 @@ class TrackControllerTest {
  }
 }
 ```
+Suite de pruebas implementadas en el backend
+
+![image](https://user-images.githubusercontent.com/15675318/222237540-e4537733-6982-45e8-b4d0-f820ec5ee64f.png)
+
 
 # Estructura de la tabla de datos Mysql
 
